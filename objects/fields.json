@@ -1,0 +1,831 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 69,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 23,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 6,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 7,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 11,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "%CARGA",
+    "qCardinal": 123,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "root",
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "%CRIACAO",
+    "qCardinal": 148,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "root",
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "%ID_APP",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "%MODIFICACAO",
+    "qCardinal": 77,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "root",
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "%PUBLICACAO",
+    "qCardinal": 43,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "root",
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "@Value",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "choiceValues"
+    ]
+  },
+  {
+    "qName": "@Value_u0",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "tags"
+    ]
+  },
+  {
+    "qName": "Ano Criação",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "Ano Modificação",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "Ano Publicação",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "Ano Última Carga",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "Carga_mais_60_dia",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "Data Criação",
+    "qCardinal": 148,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "Data Modificação",
+    "qCardinal": 77,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "Data Publicação",
+    "qCardinal": 43,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "Data Última Carga",
+    "qCardinal": 123,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "Descrição do Aplicativo",
+    "qCardinal": 127,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "Dia Criação",
+    "qCardinal": 30,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "Dia Modificação",
+    "qCardinal": 28,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "Dia Publicação",
+    "qCardinal": 23,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "Dia Última Carga",
+    "qCardinal": 31,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "Dia/Mês Criação",
+    "qCardinal": 148,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "Dia/Mês Modificação",
+    "qCardinal": 77,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "Dia/Mês Publicação",
+    "qCardinal": 43,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "Dia/Mês Última Carga",
+    "qCardinal": 123,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "Dominío",
+    "qCardinal": 2,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "owner"
+    ]
+  },
+  {
+    "qName": "Meses última carga",
+    "qCardinal": 24,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "Mês Criação",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "Mês Modificação",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "Mês Publicação",
+    "qCardinal": 11,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "Mês Última Carga",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "Mês/Ano Criação",
+    "qCardinal": 26,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_CRIACAO"
+    ]
+  },
+  {
+    "qName": "Mês/Ano Modificação",
+    "qCardinal": 19,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_MODIFICACAO"
+    ]
+  },
+  {
+    "qName": "Mês/Ano Publicação",
+    "qCardinal": 16,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_PUBLICACAO"
+    ]
+  },
+  {
+    "qName": "Mês/Ano Última Carga",
+    "qCardinal": 25,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "TEMPO_CARGA"
+    ]
+  },
+  {
+    "qName": "Nome Usuário",
+    "qCardinal": 11,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "owner"
+    ]
+  },
+  {
+    "qName": "Nome do Aplicativo",
+    "qCardinal": 253,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "Publicado",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "Stream",
+    "qCardinal": 10,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "stream"
+    ]
+  },
+  {
+    "qName": "Tamanho do app",
+    "qCardinal": 243,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "Usuário última modificação",
+    "qCardinal": 11,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "__KEY_customProperties",
+    "qCardinal": 0,
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "definition",
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "__KEY_definition",
+    "qCardinal": 0,
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "choiceValues",
+      "definition"
+    ]
+  },
+  {
+    "qName": "__KEY_root",
+    "qCardinal": 259,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "customProperties",
+      "owner",
+      "tags",
+      "stream",
+      "root"
+    ]
+  },
+  {
+    "qName": "availabilityStatus",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "createdDate",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "dynamicColor",
+    "qCardinal": 32,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "id",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "definition"
+    ]
+  },
+  {
+    "qName": "id_u0",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "id_u1",
+    "qCardinal": 11,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "owner"
+    ]
+  },
+  {
+    "qName": "id_u2",
+    "qCardinal": 10,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "stream"
+    ]
+  },
+  {
+    "qName": "id_u3",
+    "qCardinal": 259,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "migrationHash",
+    "qCardinal": 3,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "modifiedByUserName",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "modifiedDate",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "name",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "definition"
+    ]
+  },
+  {
+    "qName": "privileges",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "definition"
+    ]
+  },
+  {
+    "qName": "privileges_u0",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "owner"
+    ]
+  },
+  {
+    "qName": "privileges_u1",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "stream"
+    ]
+  },
+  {
+    "qName": "privileges_u2",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "savedInProductVersion",
+    "qCardinal": 7,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "schemaPath",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "schemaPath_u0",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "sourceAppId",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "targetAppId",
+    "qCardinal": 39,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "thumbnail",
+    "qCardinal": 168,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "userId",
+    "qCardinal": 11,
+    "qTags": [],
+    "qSrcTables": [
+      "owner"
+    ]
+  },
+  {
+    "qName": "value",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "customProperties"
+    ]
+  },
+  {
+    "qName": "valueType",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "definition"
+    ]
+  }
+]

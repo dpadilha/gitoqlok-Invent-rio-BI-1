@@ -1,0 +1,116 @@
+[
+  {
+    "qInfo": {
+      "qId": "HJEZT",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "QTD. Aplicativos (Publicados)",
+      "qDef": "count({<Publicado = {'Sim'}>}distinct id_u3)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "QTD. Aplicativos (Publicados)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "JvuGvR",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Tamanho Médio (MB)",
+      "qDef": "avg([Tamanho do app]/1024)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Tamanho Médio (MB)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "UumnPP",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "QTD. Aplicativos",
+      "qDef": "count(distinct id_u3)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "QTD. Aplicativos",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "gwwxvW",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "QTD. Aplicativos + 60 dias",
+      "qDef": "count({<Carga_mais_60_dia = {'Sim'}>}distinct id_u3)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "QTD. Aplicativos + 60 dias",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "hmCGDJ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Tamanho Médio APP (MB)",
+      "qDef": "avg([Tamanho do app]/1024)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Tamanho Médio APP (MB)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "rPfts",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "QTD. Aplicativos (Não Publicados)",
+      "qDef": "count({<Publicado = {'Não'}>}distinct id_u3)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "QTD. Aplicativos (Não Publicados)",
+      "description": "",
+      "tags": []
+    }
+  }
+]

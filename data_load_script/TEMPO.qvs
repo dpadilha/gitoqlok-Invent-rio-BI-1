@@ -1,0 +1,44 @@
+///$tab TEMPO
+TEMPO_CARGA:
+LOAD DISTINCT
+    %CARGA,
+    Date(%CARGA,'DD/MM/YYYY')             AS [Data Última Carga],
+    DATE(MONTHSTART(%CARGA),'MMM/YYYY')   AS [Mês/Ano Última Carga],
+    DAY(%CARGA)                           AS [Dia Última Carga],
+    MONTH(%CARGA)                         AS [Mês Última Carga],
+    YEAR(%CARGA)                          AS [Ano Última Carga],
+    DATE(%CARGA,'DD/MMM')                 AS [Dia/Mês Última Carga]
+RESIDENT root;
+
+TEMPO_PUBLICACAO:
+LOAD DISTINCT
+    %PUBLICACAO,
+    Date(%PUBLICACAO,'DD/MM/YYYY')             AS [Data Publicação],
+    DATE(MONTHSTART(%PUBLICACAO),'MMM/YYYY')   AS [Mês/Ano Publicação],
+    DAY(%PUBLICACAO)                           AS [Dia Publicação],
+    MONTH(%PUBLICACAO)                         AS [Mês Publicação],
+    YEAR(%PUBLICACAO)                          AS [Ano Publicação],
+    DATE(%PUBLICACAO,'DD/MMM')                 AS [Dia/Mês Publicação]
+RESIDENT root;
+
+TEMPO_CRIACAO:
+LOAD DISTINCT
+    %CRIACAO,
+    Date(%CRIACAO,'DD/MM/YYYY')             AS [Data Criação],
+    DATE(MONTHSTART(%CRIACAO),'MMM/YYYY')   AS [Mês/Ano Criação],
+    DAY(%CRIACAO)                           AS [Dia Criação],
+    MONTH(%CRIACAO)                         AS [Mês Criação],
+    YEAR(%CRIACAO)                          AS [Ano Criação],
+    DATE(%CRIACAO,'DD/MMM')                 AS [Dia/Mês Criação]
+RESIDENT root;
+
+TEMPO_MODIFICACAO:
+LOAD DISTINCT
+    %MODIFICACAO,
+    Date(%MODIFICACAO,'DD/MM/YYYY')             AS [Data Modificação],
+    DATE(MONTHSTART(%MODIFICACAO),'MMM/YYYY')   AS [Mês/Ano Modificação],
+    DAY(%MODIFICACAO)                           AS [Dia Modificação],
+    MONTH(%MODIFICACAO)                         AS [Mês Modificação],
+    YEAR(%MODIFICACAO)                          AS [Ano Modificação],
+    DATE(%MODIFICACAO,'DD/MMM')                 AS [Dia/Mês Modificação]
+RESIDENT root;

@@ -1,0 +1,157 @@
+///$tab LOAD
+LIB CONNECT TO 'QRS (tj-pb_qlik_deploy)';
+
+RestConnectorMasterTable:
+SQL SELECT 
+	"id" AS "id_u3",
+	"createdDate" AS "createdDate_u0",
+	"modifiedDate" AS "modifiedDate_u0",
+	"modifiedByUserName" AS "modifiedByUserName_u0",
+	"name" AS "name_u2",
+	"appId",
+	"sourceAppId",
+	"targetAppId",
+	"publishTime",
+	"published",
+	"description",
+	"stream",
+	"fileSize",
+	"lastReloadTime",
+	"thumbnail",
+	"savedInProductVersion",
+	"migrationHash",
+	"dynamicColor",
+	"availabilityStatus",
+	"privileges" AS "privileges_u2",
+	"schemaPath" AS "schemaPath_u0",
+	"__KEY_root",
+	(SELECT 
+		"id" AS "id_u0",
+		"createdDate",
+		"modifiedDate",
+		"modifiedByUserName",
+		"value",
+		"schemaPath",
+		"__KEY_customProperties",
+		"__FK_customProperties",
+		(SELECT 
+			"id",
+			"name",
+			"valueType",
+			"privileges",
+			"__KEY_definition",
+			"__FK_definition",
+			(SELECT 
+				"@Value",
+				"__FK_choiceValues"
+			FROM "choiceValues" FK "__FK_choiceValues" ArrayValueAlias "@Value")
+		FROM "definition" PK "__KEY_definition" FK "__FK_definition")
+	FROM "customProperties" PK "__KEY_customProperties" FK "__FK_customProperties"),
+	(SELECT 
+		"id" AS "id_u1",
+		"userId",
+		"userDirectory",
+		"name" AS "name_u0",
+		"privileges" AS "privileges_u0",
+		"__FK_owner"
+	FROM "owner" FK "__FK_owner"),
+	(SELECT 
+		"@Value" AS "@Value_u0",
+		"__FK_tags"
+	FROM "tags" FK "__FK_tags" ArrayValueAlias "@Value_u0"),
+	(SELECT 
+		"id" AS "id_u2",
+		"name" AS "name_u1",
+		"privileges" AS "privileges_u1",
+		"__FK_stream"
+	FROM "stream" FK "__FK_stream")
+FROM JSON (wrap on) "root" PK "__KEY_root";
+
+[choiceValues]:
+LOAD	[@Value],
+	[__FK_choiceValues] AS [__KEY_definition]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_choiceValues]);
+
+
+[definition]:
+LOAD	[id],
+	[name],
+	[valueType],
+	[privileges],
+	[__KEY_definition],
+	[__FK_definition] AS [__KEY_customProperties]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_definition]);
+
+
+[customProperties]:
+LOAD	[id_u0],
+	[createdDate],
+	[modifiedDate],
+	[modifiedByUserName],
+	[value],
+	[schemaPath],
+	[__KEY_customProperties],
+	[__FK_customProperties] AS [__KEY_root]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_customProperties]);
+
+
+[owner]:
+LOAD	[id_u1],
+	[userId],
+	[userDirectory]		as Dominío,
+	TEXT([name_u0])			as [Nome Usuário],
+	[privileges_u0],
+	[__FK_owner] AS [__KEY_root]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_owner]);
+
+
+[tags]:
+LOAD	[@Value_u0],
+	[__FK_tags] AS [__KEY_root]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_tags]);
+
+
+[stream]:
+LOAD	[id_u2],
+	[name_u1]			AS Stream,
+	[privileges_u1],
+	[__FK_stream] AS [__KEY_root]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_stream]);
+
+
+[root]:
+LOAD
+	[id_u3],
+	Floor([createdDate_u0])							AS %CRIACAO,
+	Floor([modifiedDate_u0])						AS %MODIFICACAO,
+	[modifiedByUserName_u0] 						AS [Usuário última modificação],
+	[name_u2] 										AS [Nome do Aplicativo],
+	[appId]											AS %ID_APP,
+	[sourceAppId],
+	[targetAppId],
+	if([published] = 'True',Floor([publishTime]))			AS %PUBLICACAO,
+	if([published] = 'True','Sim','Não')			AS Publicado,
+	[description]									AS [Descrição do Aplicativo],
+	[fileSize]/1024									AS [Tamanho do app],
+	if(Floor([lastReloadTime]) > 0,Floor([lastReloadTime])) AS %CARGA,
+    if(today() - if(Floor([lastReloadTime]) > 0,[lastReloadTime]) > 60,'Sim','Não')	 		AS Carga_mais_60_dia,
+    Floor((today() - if(Floor([lastReloadTime]) > 0,Floor([lastReloadTime])))/30)		    AS [Meses última carga],
+	[thumbnail],
+	[savedInProductVersion],
+	[migrationHash],
+	[dynamicColor],
+	[availabilityStatus],
+	[privileges_u2] AS [privileges_u2],
+	[schemaPath_u0] AS [schemaPath_u0],
+	[__KEY_root]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__KEY_root]);
+
+
+DROP TABLE RestConnectorMasterTable;

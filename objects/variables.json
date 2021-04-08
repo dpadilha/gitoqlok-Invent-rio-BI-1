@@ -1,0 +1,17 @@
+[
+  {
+    "qInfo": {
+      "qId": "03e625fd-2a30-4973-9df9-e9760189e024",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vFinishReload",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "08/04/2021 08:03:56",
+    "qIsScriptCreated": true
+  }
+]

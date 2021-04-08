@@ -1,0 +1,16 @@
+{
+  "qTitle": "Inventário BI(1)",
+  "qLastReloadTime": "2021-04-08T11:03:56.454Z",
+  "qMigrationHash": "504d4e39a7133ee172fbe29aa58348b1e4054149",
+  "qSavedInProductVersion": "12.602.11",
+  "qThumbnail": {
+    "qUrl": "/appcontent/d8a02666-dd49-4e99-bcf3-cd74b2b41297/businessintelligenceshutter_952.jpg"
+  },
+  "createdDate": "2021-04-08T16:11:28.089Z",
+  "modifiedDate": "2021-04-08T16:11:30.082Z",
+  "published": false,
+  "publishTime": "1753-01-01T00:00:00.000Z",
+  "description": "Projeto para gerenciar todos os apps desenvolvidos no Qlik Sense do TJPB",
+  "dynamicColor": "hsla(200,18%,43%,1)",
+  "stream": null
+}
